@@ -1,0 +1,132 @@
+<!-- <kt-portlet>
+	<kt-portlet-body>
+		<div #wizard class="kt-grid kt-wizard-v1 kt-wizard-v1--white" id="kt_wizard_v1"
+			data-ktwizard-state="step-first">
+			<div class="kt-grid__item">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 col-xs-12 p-2">
+						<mat-card class="card-style">
+							<mat-card-header>Welcome Email</mat-card-header><br>
+							<mat-card-content>
+								<span>Hi Ram</span><br><br>
+								<span>
+									Welcome to our company.Hope you Have a good time
+								</span>
+							</mat-card-content>
+						</mat-card>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 p-2">
+						<mat-card class="card-style">
+							<mat-card-header>Componay Culture</mat-card-header><br>
+							<mat-card-content>
+								<span>Hi Ram</span><br><br>
+								<span>
+									We are cool company with awesome
+								</span>
+							</mat-card-content>
+						</mat-card>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 p-2">
+						<mat-card class="card-style">
+							<mat-card-header>Quiz Email</mat-card-header><br>
+							<mat-card-content>
+								<span>Hi Ram</span><br><br>
+								<span>
+									Checkout out this fun quiz
+								</span>
+							</mat-card-content>
+						</mat-card>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 p-2">
+						<mat-card class="card-style text-center" (click)="openDial()">
+							<img src="./assets/media/plus.jpg" height="50px">
+							<mat-card-content>
+								Add New Email
+							</mat-card-content>
+						</mat-card>
+					</div>
+				</div>
+			</div>
+		</div>
+	</kt-portlet-body>
+</kt-portlet> -->
+<div class="kt-container  kt-grid__item kt-grid__item--fluid">
+	<h3 class="email" style="color:white">Types > Emails</h3>
+	<div class="row">
+	  <div class="col-lg-4" *ngFor="let details of emailDetails">
+		<div class="kt-portlet kt-iconbox kt-iconbox--wave">
+		  <div class="kt-portlet__body">
+			<div class="kt-iconbox__body">
+			  <div class="kt-iconbox__icon">
+				  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<polygon points="0 0 24 0 24 24 0 24"/>
+						<path d="M12,11 C9.790861,11                                                                                                                                                                                                                                       8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+						<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+					</g>
+				</svg> </div>
+			  <div class="kt-iconbox__desc">
+				<h3 class="kt-iconbox__title">
+				  <a class="kt-link">{{details.emailName}}</a>
+				</h3>
+				<h5>Hi <span class="font-weight-bold">{{details.candidateName}}</span> </h5>
+				<div class="kt-iconbox__content">
+				  {{details.content}}
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4">
+		<div class="kt-portlet kt-iconbox kt-iconbox--wave">
+		  <div class="kt-portlet__body">
+			<div class="kt-iconbox__body">
+			  <div class="kt-iconbox__icon" (click)="open(content)">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+				  height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+				  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" />
+					<rect fill="#000000" opacity="0.3"
+					  transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
+					  x="4" y="11" width="16" height="2" rx="1" />
+				  </g>
+				</svg> </div>
+			  <div class="kt-iconbox__desc">
+				<h3 class="kt-iconbox__title">
+				  <a class="kt-link">Add Email</a>
+				</h3>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+
+
+  <div class="kt-section" id="model">
+	<div class="kt-section__content">
+	  <ng-template #content let-c="close" let-d="dismiss">
+		<div class="modal-header">
+		  <h4 class="modal-title">Create Email</h4>
+		  <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <form>
+			<div class="form-group">
+			  <label class="modal-label" for="quizName">Email Name: </label>
+			  <input type="text" class="form-control w-75 float-right" id="quizName" placeholder="Enter email Name">
+			</div>
+		  </form>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cancle</button>
+		  <button type="button" class="btn btn-primary" (click)="createNewEmail(content)">Create New</button>
+		</div>
+	  </ng-template>
+	</div>
+  </div>

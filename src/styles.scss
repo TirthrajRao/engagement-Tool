@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~material-design-icons/iconfont/material-icons.css";
+@import "~highlight.js/styles/googlecode.css";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+
+// hide bootstrap dropdown arrow globally
+body {
+  background-image: none !important;
+  // margin: 100px;
+}
+body * {
+  font-family: "Open Sans", sans-serif;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.mat-table__wrapper--dashboard .mat-table {
+  min-width: 600px !important;
+  width: 100% !important;
+}
+
+.position-static {
+  position: static;
+}
+
+.kt-container {
+  .kt-grid__item {
+    .kt-grid__item--fluid {
+      background-color: white !important;
+      width: 100% !important;
+      text-align: center !important;
+      padding: 30px 0px;
+    }
+  }
+}
+
+.kt-container {
+  padding: 145px;
+}
+
+// Side Menu of aside component css start
+button.btn.btn-link.collapsed {
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  border-bottom: 3px solid black;
+}
+.btn-link {
+  background-color: transparent !important;
+  color: black !important;
+  text-decoration: none !important;
+  border-bottom: 3px solid black !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+span.card-header--title {
+  font-size: 15px;
+}
+div#ngb-panel-1 ul,
+div#ngb-panel-2 ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+div#ngb-panel-1 li a,
+div#ngb-panel-2 li a {
+  font-size: 15px;
+  color: black !important;
+}
+.kt-aside-menu {
+  .kt-menu__nav {
+    padding: 0 !important;
+    border: 3px solid black;
+  }
+}
+.btn-primary {
+  background-color: black !important;
+}
+.modal-dialog {
+  margin: auto !important;
+  top: 35% !important;
+}
+.kt-grid__item.kt-grid__item--fluid.kt-grid.kt-grid--hor.kt-wrapper {
+  padding: 60px 15px 60px 255px !important;
+}
+.card:last-of-type button.btn-link {
+  border-bottom: none !important;
+}
+.card .card-body {
+  border-bottom: 3px solid #000;
+}
+.card .card-body a{
+  color: black !important
+} 
+
+// Side Menu of aside component css end

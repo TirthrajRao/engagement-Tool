@@ -1,0 +1,124 @@
+<!-- <kt-portlet>
+	<kt-portlet-body>
+		<div #wizard class="kt-grid kt-wizard-v1 kt-wizard-v1--white" id="kt_wizard_v1"
+			data-ktwizard-state="step-first">
+			<div class="kt-grid__item">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 col-xs-12 p-2">
+						<mat-card class="card-style">
+							<mat-card-content class="mt-5">
+								Fun Quiz
+							</mat-card-content>
+						</mat-card>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 p-2">
+						<mat-card class="card-style">
+							<mat-card-content class="mt-5">
+								Cultural Quiz
+							</mat-card-content>
+						</mat-card>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 p-2">
+						<mat-card class="card-style">
+							<mat-card-content class="mt-5">
+								Feedback Form
+							</mat-card-content>
+						</mat-card>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12 p-2">
+						<mat-card class="card-style" (click)="openDial()">
+							<img src="./assets/media/plus.jpg" height="50px">
+							<mat-card-content>
+								Import Template
+							</mat-card-content>
+						</mat-card>
+					</div>
+				</div>
+			</div>
+		</div>
+	</kt-portlet-body>
+</kt-portlet> -->
+
+
+<div class="kt-container  kt-grid__item kt-grid__item--fluid">
+    <h3 class="form" style="color:white">Types > Forms/Quizzes</h3>
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let details of formQuizDetails">
+            <div class="kt-portlet kt-iconbox kt-iconbox--wave">
+                <div class="kt-portlet__body">
+                    <div class="kt-iconbox__body">
+                        <div class="kt-iconbox__icon">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+							width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<rect x="0" y="0" width="24" height="24" />
+								<path
+									d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z"
+									fill="#000000" opacity="0.3" />
+								<path
+									d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z"
+									fill="#000000" />
+							</g>
+						</svg> </div>
+                        <div class="kt-iconbox__desc">
+                            <h3 class="kt-iconbox__title">
+                                <a class="kt-link">{{details.formName}}</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="kt-portlet kt-iconbox kt-iconbox--wave">
+                <div class="kt-portlet__body">
+                    <div class="kt-iconbox__body">
+                        <div class="kt-iconbox__icon" (click)="open(content)">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" />
+                                    <rect fill="#000000" opacity="0.3"
+                                        transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
+                                        x="4" y="11" width="16" height="2" rx="1" />
+                                </g>
+                            </svg> </div>
+                        <div class="kt-iconbox__desc">
+                            <h3 class="kt-iconbox__title">
+                                <a class="kt-link">Add Form/Quiz</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="kt-section">
+    <div class="kt-section__content">
+        <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-header">
+                <h4 class="modal-title">Create Quiz</h4>
+                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="modal-label" for="quizName">Quiz Name: </label>
+                        <input type="text" class="form-control w-75 float-right" id="quizName"
+                            placeholder="Enter Quiz Name">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cancle</button>
+                <button type="button" class="btn btn-primary">Create New</button>
+            </div>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,111 @@
+<kt-portlet>
+	<kt-portlet-body>
+		<!--begin: Wizard -->
+		<div #wizard class="kt-grid kt-wizard-v1 kt-wizard-v1--white" id="kt_wizard_v1"
+			data-ktwizard-state="step-first">
+			<div class="kt-grid__item">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 pt-3 mb-md-3">
+						<form>
+							<div class="searchrow">
+								<input type="text" spellcheck="false" class="search-input" placeholder="Search">
+								<i class="icon-search btn-003 clickable"></i>
+							</div>
+						</form>
+					</div>
+					<mat-card class="w-100 mt-3">
+						<div class="d-flex justify-content-between w-100 mt-4">
+							<div class="col-5">
+								<span>
+									Causal<br>
+									<span style="color:green">
+										Active for 34 employees
+									</span>
+								</span>
+							</div>
+							<div class="col-5">
+								<span>
+									2 videos + 2quizess + 1 Schedule
+								</span>
+							</div>
+							<div class="col-2">
+								<mat-form-field>
+									<mat-label>Edit</mat-label>
+									<mat-select>
+										<mat-option>
+											Duplicate
+										</mat-option>
+										<mat-option>
+											Delete
+										</mat-option>
+									</mat-select>
+								</mat-form-field>
+							</div>
+						</div>
+					</mat-card>
+					<mat-card class="w-100 mt-3">
+						<div class="d-flex justify-content-between w-100 mt-4">
+							<div class="col-5">
+								<span>
+									Energised<br>
+									<span style="color:green">
+										Active for 34 employees
+									</span>
+								</span>
+							</div>
+							<div class="col-5">
+								<span>
+									2 videos + 2quizess + 1 Schedule
+								</span>
+							</div>
+							<div class="col-2">
+								<mat-form-field>
+									<mat-label>Edit</mat-label>
+									<mat-select>
+										<mat-option>
+											Duplicate
+										</mat-option>
+										<mat-option>
+											Delete
+										</mat-option>
+									</mat-select>
+								</mat-form-field>
+							</div>
+						</div>
+					</mat-card>
+					<mat-card class="w-100 mt-3">
+						<div class="d-flex justify-content-between w-100 mt-4">
+							<div class="col-5">
+								<span>
+									Simple<br>
+									<span style="color:red">
+										Inactive
+									</span>
+								</span>
+							</div>
+							<div class="col-5">
+								<span>
+									1 video + 1 Quize + 1 Training
+								</span>
+							</div>
+							<div class="col-2">
+								<mat-form-field>
+									<mat-label>Edit</mat-label>
+									<mat-select>
+										<mat-option>
+											Duplicate
+										</mat-option>
+										<mat-option>
+											Delete
+										</mat-option>
+									</mat-select>
+								</mat-form-field>
+							</div>
+						</div>
+					</mat-card>
+				</div>
+				<button color="primary" mat-raised-button cdkFocusInitial class="mt-4" (click)="openDial()">Create New</button>
+			</div>
+		</div>
+	</kt-portlet-body>
+</kt-portlet>

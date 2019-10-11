@@ -1,0 +1,26 @@
+<kt-portlet>
+	<kt-portlet-body>
+		<!--begin: Wizard -->
+		<div class="row" style="height: 50vh">
+			<div class="col-md-6 col-sm-10 col-xs-12" style="border: 1px solid black;margin-right: -10px;">
+				<div class="mt-3 text-center">
+					<div>
+						<span [matMenuTriggerFor]="menu2">
+							<button mat-fab>Add</button></span>
+						<mat-menu #menu2="matMenu">
+							<button mat-menu-item>Multiple Choice</button>
+							<button mat-menu-item>Text Field</button>
+							<button mat-menu-item>Rating</button>
+						</mat-menu>
+					</div>
+					<span>
+						Add Questions
+					</span>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-10 col-xs-12 text-center" style="border: 1px solid black"><br><br>
+				<span class="text-center">Preview</span>
+			</div>
+		</div>
+	</kt-portlet-body>
+</kt-portlet>

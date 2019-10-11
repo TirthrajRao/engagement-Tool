@@ -1,0 +1,15 @@
+:host {
+	.kt-aside {
+		height: 100%;
+		position: fixed;
+	}
+}
+
+// .kt-aside-menu-wrapper{
+// 	height: 100vh;
+// 	position: fixed;
+// }
+.kt-section .kt-section__content.kt-section__content--border{
+	border: none !important;
+	border-radius: 0px!important;
+}

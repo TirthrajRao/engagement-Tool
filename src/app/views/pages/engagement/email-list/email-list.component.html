@@ -1,0 +1,49 @@
+<!-- Add new email start -->
+<h3 class="email text-black">Types > Emails</h3>
+<hr>
+<div class="container-fluid">
+  <div class="row emailName">
+    <div class="col-md-3 col-sm-6" *ngFor="let details of emailDetails">
+      <mat-card>
+        <h5 class="text-center">{{details.emailName}}</h5>
+        <p> Hi <span class="font-weight-bold"> {{details.candidateName}} </span></p>
+        <p>{{details.content}}</p>
+      </mat-card>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <mat-card class="text-center">
+        <i class="fas fa-plus" (click)="open(content)"></i>
+        <p class="font-weight-bold">Add New Email</p>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<!-- Add new email end -->
+
+
+<!-- Modal to add new email field start -->
+<div class="kt-section" id="model">
+  <div class="kt-section__content">
+    <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title">Create Quiz</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label class="modal-label" for="quizName">Email Name: </label>
+            <input type="text" class="form-control w-75 float-right" id="quizName" placeholder="Enter email Name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cancle</button>
+        <button type="button" class="btn btn-primary" (click)="createNewEmail(content)">Create New</button>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<!-- Modal to add new email field end -->

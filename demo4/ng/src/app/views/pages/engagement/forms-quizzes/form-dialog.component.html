@@ -1,0 +1,15 @@
+<div class="p-3">
+	<div mat-dialog-title class="d-flex justify-content-between w-100">
+		<span>Create Quiz</span>
+	</div>
+	<hr class="p-0 m-2">
+	<div mat-dialog-content class="p-3">
+		<mat-form-field class="example-full-width mt-2" >
+			<input matInput spellcheck="false" placeholder="Quiz name">
+		</mat-form-field>
+	</div>
+	<div mat-dialog-actions class="float-right">
+		<button mat-raised-button (click)="onNoClick()" class="mr-1">Cancel</button>
+		<button mat-raised-button cdkFocusInitial class="ml-4" (click)="createNew()">Create New</button>
+	</div>
+</div>
